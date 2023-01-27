@@ -26,7 +26,10 @@ function LeftBar() {
                 <BookmarkBorderIcon />
                 <p className="leftbar-icon-name">Bookmarks</p>
             </div>
-            <button className="leftbar-tweet-button">Tweet</button>
+            <button className="leftbar-tweet-button">
+                <span className="button-full-text">Tweet</span>
+                <span className="button-short-text">+</span>
+            </button>
 
             <div className="leftbar-profile">
                 <div className="leftbar-profile-img">
