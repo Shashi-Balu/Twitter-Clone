@@ -1,7 +1,60 @@
-* {
+.leftbar {  
+    margin : 50px 30px;
+    position: fixed;
+    top: 0;
+}
+
+.twitter-icon {
+    /* margin-left: -130px; */
+    margin-bottom: 20px;
+}
+
+.leftbar-icons {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.leftbar-icons>p {
+    margin: -3px 13px;
+}
+
+.leftbar-profile {
+    position: absolute;
+    margin-top: 120%;
+    display: flex;
+ 
+}
+
+.leftbar-profile-img {
+    /* width: 50px;
+    height: 50px;
+    font-size: 50px; */
+    margin-right: 5px;
+}
+
+.leftbar-user-details>p {
+    margin-top: -10px;
+    font-size: 1rem;
+}
+
+.leftbar-tweet-button {
+    width: 230px;
+    padding: 12px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #1da1f2;
+    cursor: pointer;
+}
+
+.leftbar-icon-name {
+    font-size: 1.3rem;
+}
+
+.leftbar-user-details>p {
     font-size: 1.2rem;
 }
 
-.leftbar {
-  
+.leftbar-user-profile-name {
+    font-size: 0.9rem;
+    color: rgb(102, 102, 102);
 }

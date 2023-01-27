@@ -1,7 +1,69 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import FeedCard from "./FeedCard";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import InsertPhotoIcon from "@mui/icons-material/InsertPhoto";
+import "./Feed.css";
 
 function Feed() {
-    return <div>Feed</div>;
+    const [posts, setPosts] = useState([]);
+    const [input, setInput] = useState([]);
+
+    async function feedData() {
+        const response = await (await fetch("https://dummyjson.com/posts")).json();
+        setPosts(response.posts);
+        console.log(response.posts);
+    }
+
+    useEffect(() => {
+        feedData();
+    }, []);
+
+    function addFeed() {
+        const userFeed = [...posts];
+        userFeed.unshift({
+            tags: ["NewPost", "Trending"],
+            body: input,
+        });
+
+        setPosts(userFeed);
+        setInput("");
+    }
+    return (
+        <div className="feed-input-container">
+            <div className="feed-input-box">
+                <h3 className="feed-home">Home</h3>
+
+                <div className="input-feed">
+                    <AccountCircleIcon className="feed-user-img" />
+                    <input
+                        type="text"
+                        className="feed-input-text"
+                        placeholder="What's Happening?"
+                        value={input}
+                        onChange={(event) => setInput(event.target.value)}
+                    />
+                </div>
+                <div className="feed-upload">
+                    <InsertPhotoIcon />
+                    <button className="feed-tweet" onClick={addFeed}>
+                        Tweet
+                    </button>
+                </div>
+            </div>
+
+            <div className="feed-data-container">
+                {posts?.map((value) => (
+                    <FeedCard
+                        image={value.userId}
+                        name={value.userId}
+                        tags={value.tags}
+                        message={value.body}
+                        likeCount={value.reactions}
+                    />
+                ))}
+            </div>
+        </div>
+    );
 }
 
 export default Feed;

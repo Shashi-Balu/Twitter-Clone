@@ -1,0 +1,49 @@
+.feed-data-container {
+    font-size: 1rem;
+    border-bottom: 1px solid #7f7c7c;
+    text-align: left;
+}
+
+.feed-card {
+    margin-left: 10px;
+}
+
+.feed-user-profile {
+    display: flex;
+}
+
+.feedcard-user-img {
+    margin: 18px 10px 0 0;
+}
+
+.feedcard-user-name {
+    font-weight: 600;
+}
+
+.feedcard-tags {
+    color: #1da1f2;
+    text-transform: capitalize;
+    display: flex;
+}
+
+.feedcard-message {
+    line-height: 1.6;
+}
+
+.feedcard-icons {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedcard-like {
+    display: flex;
+}
+
+.feedcard-like>p {
+    margin: 1px 5px 10px;
+}
+
+.feedcard-save {
+    margin-right: 10px;
+}

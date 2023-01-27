@@ -6,11 +6,14 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import TagIcon from "@mui/icons-material/Tag";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function LeftBar() {
     return (
         <div className="leftbar">
-            <TwitterIcon />
+            <div className="twitter-icon leftbar-icons">
+                <TwitterIcon />
+            </div>
             <div className="leftbar-icons">
                 <HomeIcon />
                 <p className="leftbar-icon-name">Home</p>
@@ -23,13 +26,18 @@ function LeftBar() {
                 <BookmarkBorderIcon />
                 <p className="leftbar-icon-name">Bookmarks</p>
             </div>
-            <button className="leftbar-tweet">Tweet</button>
+            <button className="leftbar-tweet-button">Tweet</button>
 
             <div className="leftbar-profile">
-                <img src="" />
+                <div className="leftbar-profile-img">
+                    <AccountCircleIcon />
+                </div>
+
                 <div className="leftbar-user-details">
-                    <p>Username</p>
-                    <p>User mail</p>
+                    <p>
+                        Username <br />
+                        <span className="leftbar-user-profile-name">User_Name</span>
+                    </p>
                 </div>
             </div>
         </div>
