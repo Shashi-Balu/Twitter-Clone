@@ -14,10 +14,6 @@ function Feed() {
         console.log(response.posts);
     }
 
-    useEffect(() => {
-        feedData();
-    }, []);
-
     function addFeed() {
         const userFeed = [...posts];
         userFeed.unshift({
@@ -28,6 +24,11 @@ function Feed() {
         setPosts(userFeed);
         setInput("");
     }
+    useEffect(() => {
+        feedData();
+    }, []);
+
+    
     return (
         <div className="feed-input-container">
             <div className="feed-input-box">

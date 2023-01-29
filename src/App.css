@@ -1,0 +1,12 @@
+.App {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 860px) {
+    .App {
+        display: flex;
+        flex-direction: column;
+        /* background-color: aliceblue; */
+    }
+}

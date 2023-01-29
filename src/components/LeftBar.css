@@ -1,15 +1,13 @@
 .leftbar {  
-    margin : 50px 30px;
-    position: fixed;
+    margin : 50px 10px; 
+    /* position: fixed;
     top: 0;
-    z-index:10;
-    background-color: #000;
-    /* overflow-x: hidden; */
+    z-index:10; */
 }
 
 .twitter-icon {
-    /* margin-left: -130px; */
-    margin-bottom: 20px;
+    margin-left: -130px;
+    /* margin-bottom: 20px; */
 }
 
 .leftbar-icons {
@@ -22,6 +20,7 @@
 }
 
 .leftbar-profile {
+    display: flex;
     position: absolute;
     margin-top: 120%;
     display: flex;
@@ -76,9 +75,14 @@
     }
 
     .leftbar-tweet-button {
-        margin-left: 20px;
+        margin: 20px;
         width: 55px;
+        height: 55px;
         /* display: none; */
+    }
+
+    .leftbar-profile {
+      display: none;
     }
 
     .button-short-text {
@@ -89,3 +93,16 @@
         display: none;
     }
   }
+
+  @media (max-width: 860px) {
+    
+    .leftbar {
+        position: static;
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        margin:0;
+    }
+}
+    
+    

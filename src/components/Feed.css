@@ -1,15 +1,20 @@
 .feed-input-container {
-    height: 100%;
-    padding-left: 130%;
+    height: 50%;
+    padding: 0 0 0 10px;
+    max-width: 50%;
+    margin-left: 20px;
     
 }
 
 .feed-input-box {
-    border: 0.3px solid #7f7c7c;   
+    border: 0.3px solid #7f7f7f; 
 }
 
 .feed-data-container {
-    border: 0.3px solid #7f7c7c;
+    border-left: 0.3px solid #7f7c7c;
+    border-right: 0.3px solid #7f7c7c;
+    /* border: 0.3px solid #fff;
+    border-top: none; */
     height: 100%;
 }
 
@@ -24,7 +29,6 @@
 
 .feed-home{
     padding: 10px;
-    width: 600px;
     text-align: left;
     border-bottom: 0.3px solid #7f7c7c;
 }
@@ -56,4 +60,40 @@
     margin: 50px 10px 7px;
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width: 860px)  {
+.feed-data-container, .feed-input-box, .feed-home{
+    width: 135%;
+    border: none;
+   }
+
+   .feed-home {
+    text-align: center;
+   }
+
+   .feed-input-container {  
+    position: relative;
+   }
+
+   .feed-tweet {
+    position: absolute;
+    left: 125%;
+   }
+
+   .feed-home {
+    font-size: 1.4rem;
+   }
+
+   .feed-data-container {
+    margin-top: 50px;
+
+   }
+
+   .feed-upload {
+    padding-bottom: 20px;
+    width: 125%;
+    border-bottom: 1px solid #7f7c7c;
+   }
+
 }
