@@ -10,18 +10,22 @@ function RightBar() {
         console.log(response.quotes);
     }
     const randomQuote = Math.floor(Math.random() * quotes.length);
-    const quoteToDisplay = quotes[randomQuote];
+    const quoteToDisplay = quotes?.map((value) => value.quote)[randomQuote];
+    const author = quotes?.map((value) => value.author)[randomQuote];
     console.log(quoteToDisplay);
+
     useEffect(() => {
         quoteData();
     }, []);
-
     return (
-        <div className="rightbar-box">
-            <h3 className="rightbar-h3">Random Quote</h3>
-            <p className="news">
-                xx xxx xxxxx xxx x xxxxxxx xxxxxxx xxxxxxx xxxxxxx xxx xxxx xxx xxx
-            </p>
+        <div>
+            <div className="rightbar-box">
+                <h3 className="rightbar-h3">Random Quote</h3>
+                <p className="news">
+                    <p>"{quoteToDisplay}"</p>
+                    <p>~{author}</p>
+                </p>
+            </div>
         </div>
     );
 }

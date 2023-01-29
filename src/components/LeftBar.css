@@ -1,8 +1,5 @@
 .leftbar {  
     margin : 50px 10px; 
-    /* position: fixed;
-    top: 0;
-    z-index:10; */
 }
 
 .twitter-icon {
@@ -102,6 +99,11 @@
         justify-content: center;
         height: 100px;
         margin:0;
+
+        position: sticky;
+        top: 0;
+        background-color: #000;
+        z-index: 1;
     }
 }
     

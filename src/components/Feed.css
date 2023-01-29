@@ -11,10 +11,9 @@
 }
 
 .feed-data-container {
-    border-left: 0.3px solid #7f7c7c;
-    border-right: 0.3px solid #7f7c7c;
-    /* border: 0.3px solid #fff;
-    border-top: none; */
+
+    border: 0.3px solid #7f7c7c;
+    /* border-top: none; */
     height: 100%;
 }
 
