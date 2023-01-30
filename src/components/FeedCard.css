@@ -51,8 +51,12 @@
     margin-right: 10px;
 }
 
-@media (max-width: 860px) {
-    .feed-data-container {
-        border: 1px solid #7f7c7c;
-    }
+.feed_card_image_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feed_card_image_container>img {
+    width: 90%;
 }

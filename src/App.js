@@ -5,6 +5,8 @@ import Test from "./components/Test";
 import LeftBar from "./components/LeftBar";
 import Feed from "./components/Feed";
 import RightBar from "./components/RightBar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Bookmarks from "./pages/Bookmarks";
 
 function App() {
     return (
@@ -12,9 +14,17 @@ function App() {
             {/* <Navbar /> */}
             {/* <Home /> */}
             {/* <Test /> */}
-            <LeftBar />
-            <Feed />
-            <RightBar />
+            <BrowserRouter>
+                <LeftBar />
+                <Routes>
+                    <Route exact path="/" element={<Feed />} />
+                </Routes>
+                <Routes>
+                    <Route exact path="/bookmarks" element={<Bookmarks />} />
+                </Routes>
+
+                <RightBar />
+            </BrowserRouter>
         </div>
     );
 }

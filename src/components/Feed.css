@@ -23,7 +23,12 @@
 
 .input-feed { 
     display: flex;
-    padding-top: 20px; 
+    padding: 20px; 
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
 }
 
 .feed-home{
@@ -33,11 +38,18 @@
 }
 
 .feed-input-text {
+    width: 90%;
     background-color: transparent;
     border: none;
+    border-bottom: 0.3px solid #7f7c7c;
     font-size: 1.2rem;
     outline: none;
     color: #fff;
+    
+}
+
+.feed-input-text:last-child {
+    margin-top: 30px;
 }
 
 .feed-input-text[type=text]:focus {
@@ -51,14 +63,8 @@
     border-radius: 50px;
     color: #fff;
     background-color: #1da1f2;
-    margin-top: -10px;
     cursor: pointer;
-}
-
-.feed-upload {
-    margin: 50px 10px 7px;
-    display: flex;
-    justify-content: space-between;
+    margin: 10px 40%;
 }
 
 @media (max-width: 860px)  {
@@ -71,28 +77,25 @@
     text-align: center;
    }
 
-   .feed-input-container {  
-    position: relative;
-   }
-
-   .feed-tweet {
-    position: absolute;
-    left: 125%;
-   }
-
    .feed-home {
     font-size: 1.4rem;
    }
 
    .feed-data-container {
     margin-top: 50px;
+    border-bottom: 1px solid #7f7c7c;
 
    }
 
    .feed-upload {
-    padding-bottom: 20px;
+    padding: 20px;
     width: 125%;
     border-bottom: 1px solid #7f7c7c;
+   }
+
+   .feed-input-text {
+    width: 200%;
+
    }
 
 }

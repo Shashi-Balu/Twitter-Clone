@@ -44,7 +44,12 @@ function FeedCard(props) {
                         <p>#{value}&nbsp; </p>
                     ))}
                 </div>
-                <p className="feedcard-message">{props.message} x</p>
+                <p className="feedcard-message">{props.message}</p>
+                {props.image && (
+                    <div className="feed_card_image_container">
+                        <img src={props.image} alt={props.id} />
+                    </div>
+                )}
                 <div className="feedcard-icons">
                     <div className="feedcard-like" onClick={handleLikeClick}>
                         {isLiked ? <ThumbUpIcon /> : <ThumbUpOffAltOutlinedIcon />}
